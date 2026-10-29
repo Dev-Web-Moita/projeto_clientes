@@ -1,0 +1,2 @@
+<!-- RODAS O PY NO TERMINAL COM ESTE COMANDO, PARA VER SE ESTÁ TUDO CERTO -->
+uvicorn main:app --reload -- 5000
