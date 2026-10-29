@@ -13,10 +13,13 @@ app = FastAPI(title = "API de Clientes", version = "1.0")
 # adiciona o middleware CORS na aplicação para evitar bloqueios de segurança no navegador
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["http://localhost:5137"],  # permite solicitações de qualquer origem
-    allow_credentials = True,  # permite o envio de cookies e credenciais
-    allow_methods = ["*"],  # permite todos os métodos HTTP (GET, POST, PUT, DELETE, etc.)
-    allow_headers = ["*"]  # permite todos os cabeçalhos HTTP
+    allow_origins = [
+        "http://localhost:5137",
+        "http://localhost:5173"
+    ],
+    allow_credentials = True,
+    allow_methods = ["*"],
+    allow_headers = ["*"]
 )
 
 # define o modelo de dados para criar um cliente utilizando o pydantic BaseModel
